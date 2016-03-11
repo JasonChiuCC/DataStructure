@@ -134,7 +134,10 @@ j       = 123456
 next[j] = 011123          
           
 a. 當 j=1 時,next[1] = 0
-b. 當 j=2 時,j 由 1 ~ j-1 只有 a            => 其他情況 next[2] = 1
+b. 當 j=2 時,j 由 1 ~ j-1 只有 a             => 其他情況 next[2] = 1
 c. 當 j=3 時,j 由 1 ~ j-1 只有 ab  且 a != b => 其他情況 next[3] = 1
 c. 當 j=4 時,j 由 1 ~ j-1 只有 abc 且 a != b => 其他情況 next[3] = 1
+
+http://www.ruanyifeng.com/blog/2013/05/Knuth%E2%80%93Morris%E2%80%93Pratt_algorithm.html
+https://www.coursera.org/course/algs4partII
 ```
