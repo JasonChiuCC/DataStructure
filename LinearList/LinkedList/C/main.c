@@ -14,6 +14,9 @@ int main(int argc, char* argv[])
     ListInsertHead  (pList, 4);
     ListDisplay     (pList);    
     printf("List is %s \n", ListEmpty(pList) ? "empty" : "not empty");
+    
+    ListReverse     (pList);
+    ListDisplay     (pList);    
     return 0;
 }
 

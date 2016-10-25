@@ -51,6 +51,7 @@ void    ListInsertHead      (PList, ElemType );
 void    ListDeleteNode      (PList, ElemType );
 void    ListDisplay         (PList);
 void    ListClear           (PList);
+void    ListReverse         (PList); 
 Bool    ListEmpty           (PList);
 
 

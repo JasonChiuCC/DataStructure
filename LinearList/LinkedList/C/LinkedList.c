@@ -118,9 +118,31 @@ void ListClear(PList pList)
 }
 
 /*-----------------------------------------------------------------------
+* 反轉 List
+*----------------------------------------------------------------------*/
+void ListReverse(PList pList) 
+{  
+    PNode pCurrNode   = pList->pHead;
+    PNode pReversed   = NULL;
+    PNode pTempNode   = NULL;
+
+    while(pCurrNode != NULL)
+    {
+        pTempNode           = pCurrNode;
+        pCurrNode           = pCurrNode->pNext;
+        pTempNode->pNext    = pReversed;
+        pReversed           = pTempNode;
+    }
+    pList->pHead = pReversed;
+}
+
+
+/*-----------------------------------------------------------------------
 * 檢查 List 是否為空
 *----------------------------------------------------------------------*/
 Bool ListEmpty(PList pList) 
 {    
     return ( pList->pHead == NULL) ? TRUE : FALSE;
 }
+
+
