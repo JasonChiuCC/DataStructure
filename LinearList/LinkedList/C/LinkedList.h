@@ -20,8 +20,11 @@
 * Type defin
 *----------------------------------------------------------------------*/
 typedef int             ElemType;
-typedef struct Node*    pNode;
-typedef struct List*    pList;
+typedef int             Bool;
+typedef struct Node*    PNode;
+typedef struct List*    PList;
+#define FALSE   0
+#define TRUE    1
 
 /*-----------------------------------------------------------------------
 * struct defin
@@ -30,22 +33,25 @@ typedef struct List*    pList;
 typedef struct Node
 {
     ElemType    data;
-    pNode       pnextPtr;
+    PNode       pNext;
 }Node;
 
 /* Point to head node */
 typedef struct List 
 {
-    NodePtr     headPtr; 
+    PNode       pHead; 
 }List;
 
 /*-----------------------------------------------------------------------
 * Function define
 *----------------------------------------------------------------------*/
-ListPtr InitList    (void);
-void ListInsertTail (ListPtr, int );
-
-
+PList   ListInit            (void);
+void    ListInsertTail      (PList, ElemType );
+void    ListInsertHead      (PList, ElemType );
+void    ListDeleteNode      (PList, ElemType );
+void    ListDisplay         (PList);
+void    ListClear           (PList);
+Bool    ListEmpty           (PList);
 
 
 
